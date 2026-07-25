@@ -223,7 +223,7 @@ const Home = () => {
                       >
                         <div className={styles.heroImageGlass}>
                           <img
-                            src={slide.image}
+                            src={(slide.image.startsWith('/') ? import.meta.env.BASE_URL + slide.image.slice(1) : import.meta.env.BASE_URL + slide.image)}
                             alt={slide.title}
                             className={styles.heroProductImg}
                           />
@@ -451,7 +451,7 @@ const Home = () => {
           <div className={styles.galleryGrid}>
             {GALLERY.map((item, index) => (
               <div key={item.id} className={`${styles.galleryCard} img-zoom-container`}>
-                <img src={item.image} alt={item.title} className={styles.galleryImg} />
+                <img src={(item.image.startsWith('/') ? import.meta.env.BASE_URL + item.image.slice(1) : import.meta.env.BASE_URL + item.image)} alt={item.title} className={styles.galleryImg} />
                 <div className={styles.galleryInfo}>
                   <span className={styles.galleryCat}>{item.category}</span>
                   <h4 className={styles.galleryTitle}>{item.title}</h4>

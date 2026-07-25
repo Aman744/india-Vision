@@ -105,7 +105,7 @@ const About = () => {
             </div>
             <div className={styles.introImageWrapper}>
               <img 
-                src="/storefront.jpg" 
+                src={(import.meta.env.BASE_URL || '/') + 'storefront.jpg'} 
                 alt="Batra, India Vision Storefront in Rishikesh" 
                 className={styles.introImage}
               />
