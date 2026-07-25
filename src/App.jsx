@@ -81,7 +81,7 @@ const App = () => {
   const [isPreloaderActive, setIsPreloaderActive] = useState(true);
 
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       {/* Scroll Reset Trigger on route path change */}
       <ScrollReset />
 
