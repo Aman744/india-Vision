@@ -1,0 +1,31 @@
+.backToTop {
+  position: fixed;
+  bottom: var(--spacing-6);
+  left: var(--spacing-6); /* Kept on left so it doesn't overlap the right WhatsApp button */
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-full);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.backToTop:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .backToTop {
+    /* Lift up so it doesn't collide with the mobile bottom sticky call bar */
+    bottom: calc(var(--header-height-shrunk) + var(--spacing-4));
+  }
+}

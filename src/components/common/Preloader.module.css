@@ -1,0 +1,84 @@
+.preloaderOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #030303;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+  text-align: center;
+}
+
+.logoText {
+  font-family: var(--font-headings);
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  background: linear-gradient(135deg, var(--color-white) 40%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoText .subtext {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.38em;
+  color: var(--color-secondary);
+  margin-top: var(--spacing-2);
+  text-transform: uppercase;
+  background: none;
+  -webkit-text-fill-color: var(--color-secondary);
+}
+
+.progressBarWrapper {
+  width: 260px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+  margin-top: var(--spacing-2);
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 12px rgba(0, 174, 239, 0.6);
+}
+
+.percentText {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--color-gray-500);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .logoText {
+    font-size: var(--text-5xl);
+  }
+  .logoText .subtext {
+    font-size: var(--text-xs);
+  }
+  .progressBarWrapper {
+    width: 320px;
+  }
+}

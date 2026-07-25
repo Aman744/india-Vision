@@ -1,0 +1,245 @@
+.container {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Image Column */
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.imageWrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: #0c0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  aspect-ratio: 4 / 3;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: var(--spacing-5);
+}
+
+.warrantyBox {
+  display: flex;
+  gap: var(--spacing-3);
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--radius-md);
+}
+
+.warrantyIcon {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.warrantyTitle {
+  font-family: var(--font-headings);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.warrantyText {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+}
+
+.sizesSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.sectionTitle {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-gray-500);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: var(--spacing-1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sizesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.sizeBadge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-gray-500);
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-sm);
+}
+
+/* Details Column */
+.detailsColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-1);
+}
+
+.brandName {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.energyRating {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-success);
+  background-color: rgba(16, 185, 129, 0.1);
+  padding: 1px var(--spacing-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.productName {
+  font-family: var(--font-headings);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.25;
+  margin-bottom: var(--spacing-1);
+}
+
+.modelNum {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-4);
+  text-transform: uppercase;
+}
+
+.desc {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-4);
+}
+
+.featuresSection {
+  margin-bottom: var(--spacing-4);
+}
+
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-2);
+}
+
+.featureList li {
+  display: flex;
+  gap: var(--spacing-2);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-gray-500);
+  line-height: 1.4;
+}
+
+.checkIcon {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Specs Table */
+.specsSection {
+  margin-bottom: var(--spacing-6);
+}
+
+.specsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing-2);
+}
+
+.specsTable tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.specsTable td {
+  padding: var(--spacing-2) 0;
+  font-size: var(--text-xs);
+}
+
+.specKey {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--color-gray-500);
+  width: 40%;
+  font-size: 10px;
+}
+
+.specValue {
+  font-family: var(--font-mono);
+  color: var(--color-white);
+  font-size: 10px;
+}
+
+/* CTA */
+.enquiryBtn {
+  width: 100%;
+  background-color: var(--color-white);
+  color: #000;
+  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.enquiryBtn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 174, 239, 0.4);
+}

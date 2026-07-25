@@ -1,0 +1,289 @@
+.pageWrapper {
+  width: 100%;
+  padding-bottom: var(--spacing-16);
+}
+
+.pageHeader {
+  color: var(--color-white);
+  padding: var(--spacing-16) 0 var(--spacing-8) 0;
+  margin-bottom: var(--spacing-8);
+  text-align: center;
+  position: relative;
+}
+
+.pageTitle {
+  font-family: var(--font-headings);
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  margin-bottom: var(--spacing-3);
+  background: linear-gradient(135deg, var(--color-white) 40%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pageDesc {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .pageTitle {
+    font-size: var(--text-5xl);
+  }
+}
+
+.sectionPadding {
+  padding-top: var(--spacing-6);
+  padding-bottom: var(--spacing-16);
+}
+
+/* Search bar styling */
+.searchSection {
+  max-width: 640px;
+  margin: 0 auto var(--spacing-8) auto;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background-color: rgba(13, 13, 13, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-3) var(--spacing-4);
+  gap: var(--spacing-3);
+  box-shadow: inset 0 1.5px 0 0 rgba(255, 255, 255, 0.05);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.searchBox:focus-within {
+  border-color: var(--color-secondary);
+  box-shadow: 
+    inset 0 1.5px 0 0 rgba(255, 255, 255, 0.08),
+    0 0 20px rgba(0, 174, 239, 0.25);
+}
+
+.searchIcon {
+  color: var(--color-gray-500);
+}
+
+.searchInput {
+  flex-grow: 1;
+  font-size: var(--text-sm);
+  color: var(--color-white);
+  outline: none;
+  background: none;
+}
+
+.searchInput::placeholder {
+  color: var(--color-gray-600);
+}
+
+.clearSearchBtn {
+  color: var(--color-gray-500);
+  transition: var(--transition-fast);
+}
+
+.clearSearchBtn:hover {
+  color: var(--color-white);
+}
+
+/* Category Tabs */
+.tabsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-10);
+}
+
+.tabBtn {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-gray-500);
+  padding: var(--spacing-2) var(--spacing-5);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: var(--transition-fast);
+}
+
+.tabBtn:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+}
+
+.tabActive {
+  background-color: rgba(0, 174, 239, 0.1);
+  color: var(--color-secondary);
+  border-color: rgba(0, 174, 239, 0.2);
+}
+
+/* Accordion list */
+.faqList {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.faqItem {
+  background-color: rgba(13, 13, 13, 0.4);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  box-shadow: 
+    inset 0 1.5px 0 0 rgba(255, 255, 255, 0.07),
+    0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.faqItem:hover {
+  border-color: rgba(0, 174, 239, 0.25);
+  box-shadow: 
+    inset 0 1.5px 0 0 rgba(255, 255, 255, 0.1),
+    0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.itemExpanded {
+  border-color: var(--color-secondary);
+}
+
+.questionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-5) var(--spacing-6);
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.questionTitleBox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.helpIcon {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.questionText {
+  font-family: var(--font-headings);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.4;
+}
+
+@media (min-width: 640px) {
+  .questionText {
+    font-size: var(--text-base);
+  }
+}
+
+.arrow {
+  color: var(--color-gray-500);
+  transition: transform var(--transition-normal), color var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.questionHeader:hover .arrow {
+  color: var(--color-white);
+}
+
+.arrowRotate {
+  transform: rotate(180deg);
+  color: var(--color-secondary);
+}
+
+/* Answer block */
+.answerWrapper {
+  overflow: hidden;
+}
+
+.answerContent {
+  padding: 0 var(--spacing-6) var(--spacing-6) var(--spacing-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  margin-top: calc(-1 * var(--spacing-1));
+  padding-top: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.answerText {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  line-height: 1.6;
+}
+
+.categoryTag {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  background-color: rgba(0, 174, 239, 0.08);
+  border: 1px solid rgba(0, 174, 239, 0.15);
+  padding: 2px var(--spacing-2);
+  border-radius: var(--radius-sm);
+}
+
+/* No Results box */
+.noResultsBox {
+  background-color: rgba(13, 13, 13, 0.4);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-10) var(--spacing-6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.noResultsIcon {
+  color: var(--color-gray-500);
+}
+
+.noResultsTitle {
+  font-family: var(--font-headings);
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.noResultsText {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  max-width: 420px;
+  line-height: 1.5;
+}
+
+.resetBtn {
+  padding: var(--spacing-2) var(--spacing-6);
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+  color: #000;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
