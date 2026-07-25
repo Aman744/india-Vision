@@ -10,7 +10,7 @@ export const STORE = {
   email: "info@batraindiavision.com",
   address: "Lajpat Rai Marg, Rishikesh, Uttarakhand - 249201",
   gstin: "05ABWPB1460B1ZU",
-  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.454794263721!2d78.29367731512445!3d30.08688408188177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39093e8271e843c1%3A0x67c29373977c0c20!2sIndia%20Vision%2C%20Rishikesh!5e0!3m2!1sen!2sin!4v1720826940000!5m2!1sen!2sin",
+  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.76212356598!2d78.29760477610018!3d30.106237199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390917ea8cc64d29%3A0x5f7aa838e157264d!2sINDIA%20VISION%20ELECTRONICS!5e0!3m2!1sen!2sin!4v1720826940000!5m2!1sen!2sin",
   businessHours: [
     { days: "Friday - Wednesday", hours: "09:00 AM – 9:00 PM" },
     { days: "Thursday", hours: "10:00 AM – 1:00 PM" }
